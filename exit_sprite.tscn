@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://d35vx2vb8p1w2"]
+
+[ext_resource type="Script" path="res://exit_sprite.gd" id="1_uq1bj"]
+[ext_resource type="Texture2D" uid="uid://ftccriq4yj8e" path="res://White exit_icon.png" id="2_k8qhr"]
+[ext_resource type="Script" path="res://WhiteExitIcon.gd" id="3_geb5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qamp"]
+size = Vector2(1137, 572)
+
+[node name="Exit Sprite" type="Area2D"]
+script = ExtResource("1_uq1bj")
+
+[node name="WhiteExitIcon" type="Sprite2D" parent="."]
+position = Vector2(335, 339)
+texture = ExtResource("2_k8qhr")
+script = ExtResource("3_geb5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(292, 335)
+shape = SubResource("RectangleShape2D_0qamp")
+
+[connection signal="body_entered" from="." to="WhiteExitIcon" method="_on_exit_sprite_body_entered"]

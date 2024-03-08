@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://co7813b2kq2ow"]
+
+[ext_resource type="Texture2D" uid="uid://c8t52d6p0xm47" path="res://still BlackHat_Hacker.png" id="1_a83ki"]
+[ext_resource type="Script" path="res://PLayer.gd" id="1_nq18r"]
+[ext_resource type="Script" path="res://StillBlackHatHacker.gd" id="3_fh3b0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48bfu"]
+size = Vector2(308, 484)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(468, 294)
+script = ExtResource("1_nq18r")
+
+[node name="StillBlackHatHacker" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1, 4)
+texture = ExtResource("1_a83ki")
+script = ExtResource("3_fh3b0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(7, 12)
+shape = SubResource("RectangleShape2D_48bfu")
