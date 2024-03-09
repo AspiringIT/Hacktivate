@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://guh662v8q4wi"]
+
+[ext_resource type="FontFile" uid="uid://buo1dh6qtwfmr" path="res://Fonts/IBMPlexSans-Regular.ttf" id="1_n2afy"]
+[ext_resource type="Script" path="res://terminal.gd" id="1_nl6vv"]
+[ext_resource type="Script" path="res://Input.gd" id="2_an5cq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxp5m"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avxai"]
+bg_color = Color(0.215686, 0.215686, 0.215686, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x10sv"]
+bg_color = Color(0.317647, 0.317647, 0.317647, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cke26"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w7pmt"]
+
+[node name="Terminal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nl6vv")
+
+[node name="Backround" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kxp5m")
+
+[node name="MarginContainer" type="MarginContainer" parent="Backround"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Rows" type="VBoxContainer" parent="Backround/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GameInfo" type="PanelContainer" parent="Backround/MarginContainer/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_avxai")
+
+[node name="Scroll" type="ScrollContainer" parent="Backround/MarginContainer/Rows/GameInfo"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="HistoryRows" type="VBoxContainer" parent="Backround/MarginContainer/Rows/GameInfo/Scroll"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="InputArea" type="PanelContainer" parent="Backround/MarginContainer/Rows"]
+custom_minimum_size = Vector2(2.08165e-12, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_x10sv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Backround/MarginContainer/Rows/InputArea"]
+layout_mode = 2
+
+[node name="Caret" type="Label" parent="Backround/MarginContainer/Rows/InputArea/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_n2afy")
+theme_override_font_sizes/font_size = 35
+text = " > "
+
+[node name="Input" type="LineEdit" parent="Backround/MarginContainer/Rows/InputArea/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_n2afy")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cke26")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w7pmt")
+max_length = 65
+script = ExtResource("2_an5cq")
+
+[connection signal="text_submitted" from="Backround/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="Backround/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="Backround/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]

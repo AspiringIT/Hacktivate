@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://vwyks6lmi08d"]
+
+[ext_resource type="Script" path="res://InputResponse.gd" id="1_n1n4n"]
+[ext_resource type="FontFile" uid="uid://buo1dh6qtwfmr" path="res://Fonts/IBMPlexSans-Regular.ttf" id="1_ukxmu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0bo6g"]
+font = ExtResource("1_ukxmu")
+font_size = 20
+font_color = Color(0.647059, 0.647059, 0.647059, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4yrdt"]
+font = ExtResource("1_ukxmu")
+font_size = 22
+
+[node name="InputResponse" type="VBoxContainer"]
+script = ExtResource("1_n1n4n")
+
+[node name="InputHistory" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ukxmu")
+theme_override_font_sizes/font_size = 25
+text = " > This is what the user typed"
+label_settings = SubResource("LabelSettings_0bo6g")
+
+[node name="Response" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ukxmu")
+theme_override_font_sizes/font_size = 28
+text = "This is what the game will return"
+label_settings = SubResource("LabelSettings_4yrdt")
