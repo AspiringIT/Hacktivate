@@ -8,7 +8,7 @@ const InputResponse = preload("res://InputResponse.tscn")
 @onready var scrollbar = scroll.get_v_scroll_bar()
 
 func _ready() -> void:
-	scrollbar.connect("changed", self,"handle_scrollbar_changed")
+	scrollbar.connect("changed", Callable(self, "handle_scrollbar_changed"))
 
 
 func handle_scrollbar_changed():
