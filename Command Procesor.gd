@@ -6,7 +6,7 @@ func process_command(input: String) -> String:
 		return "Error: No words were parsed"
 	var first_word = words[0].to_lower()
 	var second_word =""
-	if words.size >1:
+	if words.size() > 1:
 		second_word = words[1].to_lower()
 	match first_word:
 		"go":

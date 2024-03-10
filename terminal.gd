@@ -8,7 +8,7 @@ const InputResponse = preload("res://InputResponse.tscn")
 @onready var history_rows = $Backround/MarginContainer/Rows/GameInfo/Scroll/HistoryRows
 @onready var scroll = $Backround/MarginContainer/Rows/GameInfo/Scroll
 @onready var scrollbar = scroll.get_v_scroll_bar()
-@onready var command_processor
+@onready var command_processor = $CommandProcessor
 
 func _ready() -> void:
 	scrollbar.connect("changed", Callable(self, "handle_scrollbar_changed")) #Similar to lambda, lambdas are anonymous functions that can be passed around as arguments to other functions. While the syntax is different, the concept is similar: creating a function on-the-fly to be used as a callback. In this case, GDScript achieves a similar functionality using its Callable class.
