@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://guh662v8q4wi"]
+[gd_scene load_steps=10 format=3 uid="uid://guh662v8q4wi"]
 
 [ext_resource type="FontFile" uid="uid://buo1dh6qtwfmr" path="res://Fonts/IBMPlexSans-Regular.ttf" id="1_n2afy"]
 [ext_resource type="Script" path="res://terminal.gd" id="1_nl6vv"]
 [ext_resource type="Script" path="res://Input.gd" id="2_an5cq"]
+[ext_resource type="Script" path="res://Command Procesor.gd" id="2_f3e5s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxp5m"]
 bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
@@ -25,6 +26,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nl6vv")
+
+[node name="CommandProcessor" type="Node" parent="."]
+script = ExtResource("2_f3e5s")
 
 [node name="Backround" type="PanelContainer" parent="."]
 layout_mode = 1
