@@ -11,7 +11,9 @@ func process_command(input: String) -> String:
 	match first_word:
 		"go":
 			return go(second_word)
-		_:
+		"help":
+			return help()
+		_: #If there are no other cases this executes
 			return "Unreconized command - please try again"
 			
 			
@@ -20,3 +22,6 @@ func go(second_word: String) -> String:
 	if second_word == "":
 		return "Not enough paramaters, please check your command and try again"
 	return "You go %s" % second_word
+	
+func help() -> String:
+	return "You can use these commands go [location], help"

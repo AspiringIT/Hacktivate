@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://be36r6py5a8dt"]
+
+[ext_resource type="FontFile" uid="uid://buo1dh6qtwfmr" path="res://Fonts/IBMPlexSans-Regular.ttf" id="1_02sue"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0bo6g"]
+font = ExtResource("1_02sue")
+font_size = 20
+font_color = Color(0.647059, 0.647059, 0.647059, 1)
+
+[node name="InputHistory" type="Label"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_02sue")
+theme_override_font_sizes/font_size = 25
+text = " > This is what the user typed"
+label_settings = SubResource("LabelSettings_0bo6g")
+autowrap_mode = 3
