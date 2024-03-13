@@ -8,7 +8,6 @@ const response = preload("res://response.tscn")
 @onready var scroll = $Backround/MarginContainer/Rows/GameInfo/Scroll
 @onready var scrollbar = scroll.get_v_scroll_bar()
 @onready var command_processor = $CommandProcessor
-@onready var scrollbar: ScrollBar = $Backround/MarginContainer/Rows/GameInfo/Scroll/VScrollBar
 
 func _ready() -> void:
 	scrollbar.connect("value_changed", self, "handle_scrollbar_changed")
