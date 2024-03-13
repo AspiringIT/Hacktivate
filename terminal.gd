@@ -1,6 +1,5 @@
 extends Control
 
-
 const InputResponse = preload("res://InputResponse.tscn")
 const response = preload("res://response.tscn")
 @export var max_lines_remembered := 50 #Hstory of command line
@@ -9,15 +8,14 @@ const response = preload("res://response.tscn")
 @onready var scroll = $Backround/MarginContainer/Rows/GameInfo/Scroll
 @onready var scrollbar = scroll.get_v_scroll_bar()
 @onready var command_processor = $CommandProcessor
+@onready var scrollbar: ScrollBar = $Backround/MarginContainer/Rows/GameInfo/Scroll/VScrollBar
 
 func _ready() -> void:
-	scrollbar.connect("changed", Callable(self, "handle_scrollbar_changed")) #Similar to lambda, lambdas are anonymous functions that can be passed around as arguments to other functions. While the syntax is different, the concept is similar: creating a function on-the-fly to be used as a callback. In this case, GDScript achieves a similar functionality using its Callable class.
-	var starting_message = response.instantiate()
-	starting_message.text = "Welcome to the terminal! If you're new to using the command line interface, don't worry, it's easier than you might think. Simply type commands and hit Enter to execute them. If you ever need guidance or want to discover what commands are available, just type 'help' and press Enter. This will provide you with a list of commonly used commands and their usage instructions. Remember, the terminal is a powerful tool, so always double-check your commands before running them to ensure you get the results you expect. Happy command-line adventuring!"
-	add_response_to_game(starting_message)
+	scrollbar.connect("value_changed", self, "handle_scrollbar_changed")
 
-func handle_scrollbar_changed():
-	scroll.scroll_vertical = scrollbar.max_value
+func handle_scrollbar_changed(value: float) -> void:
+	scroll.scroll_vertical = value
+
 
 func _on_input_text_submitted(new_text: String) -> void:
 	if new_text.is_empty(): #This is used to prevent empty lines
@@ -34,6 +32,11 @@ func add_response_to_game(response: Control):
 func delete_History_beyond_limit():
 	if history_rows.get_child_count() > max_lines_remembered: #This is used to clear history hafter a set amount of lines
 		var rows_to_forget = history_rows.get_child_count() - max_lines_remembered
+		for i in range(rows_to_forget):
+			history_rows.get_child(i).queue_free() #queue_free deletes notes as soon as its safe to do so
+			
+func delete_all_history(): #Clears teh entier history *This is unrecoverable
+		var rows_to_forget = history_rows.get_child_count()
 		for i in range(rows_to_forget):
 			history_rows.get_child(i).queue_free() #queue_free deletes notes as soon as its safe to do so
 
