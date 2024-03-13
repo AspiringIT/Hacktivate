@@ -1,5 +1,7 @@
 extends Node
 
+
+
 # Function to process the user input and execute the appropriate command
 func process_command(input: String) -> String:
 	# Split the input string into words
@@ -12,12 +14,15 @@ func process_command(input: String) -> String:
 	# Initialize variables for the second and third words
 	var second_word = ""
 	var third_word = ""
+	var fourth_word = ""
 	# Check if there are more than one word in the input
 	if words.size() > 1:
 		second_word = words[1].to_lower()
 	# Check if there are more than two words in the input
 	if words.size() > 2:
 		third_word = words[2]
+	if words.size() > 3:
+			fourth_word = words[3]
 
 	# Match the first word to determine the command
 	match first_word:
@@ -26,7 +31,9 @@ func process_command(input: String) -> String:
 		"help":  # If the command is "help"
 			return help()  # Display help information
 		"curl":  # If the command is "curl"
-			return curl(second_word, third_word)  # Execute the "curl" command with the URL
+			return curl(second_word, third_word,fourth_word)  # Execute the "curl" command with the URL
+		"clear":
+			return clear()
 		_:  # If the command is unrecognized
 			return "Unrecognized command - please try again"
 
@@ -39,7 +46,7 @@ func go(second_word: String) -> String:
 	return "You go " + second_word
 
 # Function to handle the "curl" command
-func curl(second_word: String, third_word: String) -> String:
+func curl(second_word: String, third_word: String, fourth_word: String) -> String:
 	# Check if a URL is provided as the third word
 	if second_word == "example.com":
 		return '<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset="utf-8" />\n    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1" />\n    <style type="text/css">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href="https://www.iana.org/domains/example">More information...</a></p>\n</div>\n</body>\n</html>'
@@ -51,5 +58,9 @@ func curl(second_word: String, third_word: String) -> String:
 "
 	return "An Error has occured"
 # Function to display help information
+func clear():
+	#Terminal.delete_all_history()
+	return "12345678"
+#
 func help() -> String:
-	return "You can use these commands: go [location], curl [options], help"
+	return "You can use these commands: go [location], curl [options], clear, help"
