@@ -59,6 +59,7 @@ func curl(second_word: String, third_word: String, fourth_word: String) -> Strin
 	return "An Error has occured"
 # Function to display help information
 func clear():
+	#var Terminal = "res://terminal.gd"
 	#Terminal.delete_all_history()
 	return "12345678"
 #

@@ -10,11 +10,10 @@ const response = preload("res://response.tscn")
 @onready var command_processor = $CommandProcessor
 
 func _ready() -> void:
-	scrollbar.connect("value_changed", self, "handle_scrollbar_changed")
+	scrollbar.connect("changed", Callable(self, "handle_scrollbar_changed"))
 
-func handle_scrollbar_changed(value: float) -> void:
-	scroll.scroll_vertical = value
-
+func handle_scrollbar_changed():
+	scroll.scroll_vertical = scrollbar.max_value
 
 func _on_input_text_submitted(new_text: String) -> void:
 	if new_text.is_empty(): #This is used to prevent empty lines
