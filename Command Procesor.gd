@@ -1,6 +1,6 @@
 extends Node
 
-
+var user = "No User Set. To set the user use the setuser command"
 
 # Function to process the user input and execute the appropriate command
 func process_command(input: String) -> String:
@@ -34,6 +34,10 @@ func process_command(input: String) -> String:
 			return curl(second_word, third_word,fourth_word)  # Execute the "curl" command with the URL
 		"clear":
 			return clear()
+		"setuser":
+			return setuser(second_word,third_word)
+		"whoami":
+			return whoami()
 		_:  # If the command is unrecognized
 			return "Unrecognized command - please try again"
 
@@ -61,7 +65,22 @@ func curl(second_word: String, third_word: String, fourth_word: String) -> Strin
 func clear():
 	#var Terminal = "res://terminal.gd"
 	#Terminal.delete_all_history()
-	return "12345678"
-#
+	return "Still Working on this command"
+
+func setuser(second_word: String, third_word: String) -> String:
+	if (second_word !="") && third_word != "":
+		user = second_word + " " + third_word
+		return "User is set to " + user
+	if second_word != "":
+		user = second_word
+		return "User is set to " + user
+	
+	else:
+		return "Invaild number of arguments. Did you mean whoami?"
+		
+func whoami():
+	return user
+	
+
 func help() -> String:
 	return "You can use these commands: go [location], curl [options], clear, help"
