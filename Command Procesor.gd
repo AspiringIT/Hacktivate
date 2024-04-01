@@ -62,10 +62,11 @@ func curl(second_word: String, third_word: String, fourth_word: String) -> Strin
 "
 	return "An Error has occured"
 # Function to display help information
+
 func clear():
-	#var Terminal = "res://terminal.gd"
-	#Terminal.delete_all_history()
-	return "Still Working on this command"
+	var terminal = get_parent()
+	terminal.delete_all_history()
+	return "Terminal history cleared"
 
 func setuser(second_word: String, third_word: String) -> String:
 	if (second_word !="") && third_word != "":
