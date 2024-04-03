@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://s8hgjq78o6pu"]
+[gd_scene load_steps=13 format=3 uid="uid://s8hgjq78o6pu"]
 
 [ext_resource type="Script" path="res://Maps/outside_map.gd" id="1_p0sml"]
 [ext_resource type="Texture2D" uid="uid://dd0jb5oktgxtx" path="res://Images/atlas_16x.png" id="2_qgogq"]
 [ext_resource type="Texture2D" uid="uid://c3p5iet3ie7o8" path="res://Images/TilesetElement.png" id="3_a2qhs"]
 [ext_resource type="PackedScene" uid="uid://co7813b2kq2ow" path="res://PLayer.tscn" id="4_qcnx0"]
-[ext_resource type="Texture2D" uid="uid://b3edjx8gs5k50" path="res://Images/Computer.png" id="5_0ysdf"]
 [ext_resource type="PackedScene" uid="uid://d35vx2vb8p1w2" path="res://exit_sprite.tscn" id="5_44sd5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfpjw"]
@@ -2416,9 +2415,6 @@ texture = ExtResource("3_a2qhs")
 sources/0 = SubResource("TileSetAtlasSource_7jnv3")
 sources/1 = SubResource("TileSetAtlasSource_oqt2n")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaksk"]
-size = Vector2(2920, 2120)
-
 [node name="Inside_House" type="CanvasLayer"]
 layer = -1
 script = ExtResource("1_p0sml")
@@ -2457,14 +2453,6 @@ scale = Vector2(0.1, 0.1)
 position = Vector2(340, 453)
 scale = Vector2(0.06, 0.06)
 
-[node name="Computer" type="Sprite2D" parent="."]
-position = Vector2(954, 506)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("5_0ysdf")
-
-[node name="Computer Area" type="Area2D" parent="Computer"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Computer Area"]
-position = Vector2(-80.002, -80)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_oaksk")
+[node name="PC Sprite" parent="." instance=ExtResource("5_44sd5")]
+position = Vector2(850, 411)
+scale = Vector2(0.27, 0.27)
