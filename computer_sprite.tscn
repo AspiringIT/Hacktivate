@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj8fxnrjp7j41"]
+
+[ext_resource type="Script" path="res://Maps/Computer_Icon.gd" id="1_gj6hr"]
+[ext_resource type="Texture2D" uid="uid://b3edjx8gs5k50" path="res://Images/Computer.png" id="1_h1krh"]
+[ext_resource type="Script" path="res://Computer.gd" id="3_8hwvo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwnmk"]
+size = Vector2(1159, 642)
+
+[node name="Computer Sprite" type="Area2D"]
+script = ExtResource("1_gj6hr")
+
+[node name="Computer" type="Sprite2D" parent="."]
+position = Vector2(595, 370)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("1_h1krh")
+script = ExtResource("3_8hwvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(589.5, 311)
+shape = SubResource("RectangleShape2D_dwnmk")
+
+[connection signal="body_entered" from="." to="Computer" method="_on_computer_sprite_body_entered"]

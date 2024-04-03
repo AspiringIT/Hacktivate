@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://s8hgjq78o6pu"]
+[gd_scene load_steps=14 format=3 uid="uid://s8hgjq78o6pu"]
 
 [ext_resource type="Script" path="res://Maps/outside_map.gd" id="1_p0sml"]
 [ext_resource type="Texture2D" uid="uid://dd0jb5oktgxtx" path="res://Images/atlas_16x.png" id="2_qgogq"]
 [ext_resource type="Texture2D" uid="uid://c3p5iet3ie7o8" path="res://Images/TilesetElement.png" id="3_a2qhs"]
 [ext_resource type="PackedScene" uid="uid://co7813b2kq2ow" path="res://PLayer.tscn" id="4_qcnx0"]
 [ext_resource type="PackedScene" uid="uid://d35vx2vb8p1w2" path="res://exit_sprite.tscn" id="5_44sd5"]
+[ext_resource type="PackedScene" uid="uid://cj8fxnrjp7j41" path="res://computer_sprite.tscn" id="6_hary1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfpjw"]
 texture = ExtResource("2_qgogq")
@@ -2450,9 +2451,9 @@ scale = Vector2(0.1, 0.1)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Exit Sprite" parent="." instance=ExtResource("5_44sd5")]
-position = Vector2(340, 453)
-scale = Vector2(0.06, 0.06)
+position = Vector2(294, 455)
+scale = Vector2(0.15, 0.15)
 
-[node name="PC Sprite" parent="." instance=ExtResource("5_44sd5")]
-position = Vector2(850, 411)
-scale = Vector2(0.27, 0.27)
+[node name="Computer Sprite" parent="." instance=ExtResource("6_hary1")]
+position = Vector2(857, 445)
+scale = Vector2(0.16, 0.16)
