@@ -38,6 +38,8 @@ func process_command(input: String) -> String:
 			return setuser(second_word,third_word)
 		"whoami":
 			return whoami()
+		"exit":  
+			return exit()  
 		_:  # If the command is unrecognized
 			return "Unrecognized command - please try again"
 
@@ -82,6 +84,13 @@ func setuser(second_word: String, third_word: String) -> String:
 func whoami():
 	return user
 	
+func exit() -> String:
+	var scene_path = "res://Maps/inside_house.tscn"
+	if ResourceLoader.exists(scene_path):
+		get_tree().change_scene_to_file(scene_path)
+		return "Scene changed to inside_house"
+	else:
+		return "Failed to change scene because the scene file does not exist"
 
 func help() -> String:
-	return "You can use these commands: go [location], curl [options], clear, help"
+	return "You can use these commands: go [location], curl [options], clear, exit, help"
