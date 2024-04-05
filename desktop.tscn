@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://doq14x7ols1an"]
+[gd_scene load_steps=5 format=3 uid="uid://doq14x7ols1an"]
 
 [ext_resource type="Texture2D" uid="uid://cg6nwainesomp" path="res://terminal.png" id="1_3le2j"]
 [ext_resource type="Texture2D" uid="uid://wlnrkqwnpugk" path="res://Email.png" id="2_lq615"]
 [ext_resource type="Script" path="res://Terminal Button.gd" id="2_rvvc2"]
+[ext_resource type="Script" path="res://Computer Button.gd" id="4_g7v8r"]
 
 [node name="Desktop" type="Control"]
 layout_mode = 3
@@ -46,6 +47,7 @@ offset_top = 11.176
 offset_right = -248.648
 offset_bottom = -34.76
 icon = ExtResource("2_lq615")
+script = ExtResource("4_g7v8r")
 
 [node name="Terminal_Label" type="Label" parent="Backround"]
 offset_left = 75.0
@@ -62,3 +64,4 @@ offset_bottom = 207.0
 text = "Mail"
 
 [connection signal="pressed" from="Backround/Terminal Button" to="Backround/Terminal Button" method="_on_pressed"]
+[connection signal="pressed" from="Backround/Computer Button" to="Backround/Computer Button" method="_on_pressed"]
