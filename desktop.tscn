@@ -38,14 +38,14 @@ script = ExtResource("2_rvvc2")
 
 [node name="Computer Button" type="Button" parent="Backround"]
 anchors_preset = -1
-anchor_left = 0.445
+anchor_left = 0.299
 anchor_top = 0.063
-anchor_right = 0.649
-anchor_bottom = 0.37
-offset_left = -168.64
+anchor_right = 0.433
+anchor_bottom = 0.316
+offset_left = -0.448029
 offset_top = 11.176
-offset_right = -248.648
-offset_bottom = -34.76
+offset_right = 0.183968
+offset_bottom = 0.231991
 icon = ExtResource("2_lq615")
 script = ExtResource("4_g7v8r")
 
