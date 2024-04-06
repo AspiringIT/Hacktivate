@@ -50,43 +50,43 @@ By Nicholas Weist
 
 
 
-    	**Hacktivate** a 2D game where you can navigate your person to different locations to hack, buy and sell data, and to gain physical access to a site. When hacking a terminal will be primarily used.
+		**Hacktivate** a 2D game where you can navigate your person to different locations to hack, buy and sell data, and to gain physical access to a site. When hacking a terminal will be primarily used.
 
 <h4>
-    Inspiration</h4>
+	Inspiration</h4>
 
 
 
-    **<span style="text-decoration:underline;">Tron Legacy</span>**
+	**<span style="text-decoration:underline;">Tron Legacy</span>**
 
 
-    Tron Legacy is a futuristic movie based upon users trapped inside a computer program of their own creation and their mission to escape. In this movie it has “Identity Disk” which is pretty much the save file for every individual program and users. However they must also prevent the programs from escaping. \
+	Tron Legacy is a futuristic movie based upon users trapped inside a computer program of their own creation and their mission to escape. In this movie it has “Identity Disk” which is pretty much the save file for every individual program and users. However they must also prevent the programs from escaping. \
 
 
 
-    **<span style="text-decoration:underline;">Bitburner</span>**
+	**<span style="text-decoration:underline;">Bitburner</span>**
 
 
-    BitBurner is a Terminal based hacking game with it’s own **items/shop and commands** to attack systems. It also has a **difficulty setting** for the users choice of difficulty and if they want to use more realistic commands. 
+	BitBurner is a Terminal based hacking game with it’s own **items/shop and commands** to attack systems. It also has a **difficulty setting** for the users choice of difficulty and if they want to use more realistic commands. 
 
 
-    **Hack the Box**
+	**Hack the Box**
 
 
-    Hack the box is free to start learning hacking and is meant to teach the basics. This game is also to teach the basics and emulate systems to **teach hacking**.
+	Hack the box is free to start learning hacking and is meant to teach the basics. This game is also to teach the basics and emulate systems to **teach hacking**.
 
 
-    Player Experience
+	Player Experience
 
 
-    In a Computer terminal for most of the **15 levels **(There will be a few levels that require traveling), the player will solve a short but perhaps complex puzzle **requiring planning and management of computer resources**. The player must learn and use their knowledge of the interactions between the player actions and various environmental items to understand how to pass through each level.
+	In a Computer terminal for most of the **15 levels **(There will be a few levels that require traveling), the player will solve a short but perhaps complex puzzle **requiring planning and management of computer resources**. The player must learn and use their knowledge of the interactions between the player actions and various environmental items to understand how to pass through each level.
 
 <h4>
-    Platform</h4>
+	Platform</h4>
 
 
 
-    The game is developed to be released on windows PC (and eventually mac) Currently no plan for linux
+	The game is developed to be released on windows PC (and eventually mac) Currently no plan for linux
 
 	
 
@@ -99,18 +99,18 @@ By Nicholas Weist
 * Aseprite for graphics and UI
 * Fami Studio for all music and SFX (Maybe soundtrap or garageband)
 <h4>
-    Genre</h4>
+	Genre</h4>
 
 
 
-    Singleplayer, puzzle, casual,Programming
+	Singleplayer, puzzle, casual,Programming
 
 <h4>
-    Target Audience</h4>
+	Target Audience</h4>
 
 
 
-    Without heavy or complicated ideas, and intuitive-to-grasp mechanics, this game is marketed to at least **intermediate game players and coders** who are up for puzzling challenges as well as more veteran players up for solving complicated problems
+	Without heavy or complicated ideas, and intuitive-to-grasp mechanics, this game is marketed to at least **intermediate game players and coders** who are up for puzzling challenges as well as more veteran players up for solving complicated problems
 
 
 <h3>Concept</h3>
@@ -120,25 +120,25 @@ By Nicholas Weist
 
 
 
-    The player controls a character (Black Hat Hacker) and his job is to not get caught and to successfully hack into systems and sell the data to improve their skills and items.
+	The player controls a character (Black Hat Hacker) and his job is to not get caught and to successfully hack into systems and sell the data to improve their skills and items.
 
 <h4>Theme Interpretation (Digital Dystopia)</h4>
 
 
 
-    In "Hacktivate," players delve into a **digital underworld where data is currency and hacking is the key to survival.** The game's theme revolves around a dystopian future where the lines between reality and cyberspace blur, echoing the futuristic ambiance of "Tron Legacy."
+	In "Hacktivate," players delve into a **digital underworld where data is currency and hacking is the key to survival.** The game's theme revolves around a dystopian future where the lines between reality and cyberspace blur, echoing the futuristic ambiance of "Tron Legacy."
 
 
-    The concept of identity and control, reminiscent of the "Identity Disk" in "Tron Legacy," is central to the game. Players navigate their persona through a maze of terminals and networks, each representing a fragment of the digital world. The constant struggle to maintain control over one's identity while navigating through hostile systems reflects the dystopian theme of individuals trapped within their own creations.
+	The concept of identity and control, reminiscent of the "Identity Disk" in "Tron Legacy," is central to the game. Players navigate their persona through a maze of terminals and networks, each representing a fragment of the digital world. The constant struggle to maintain control over one's identity while navigating through hostile systems reflects the dystopian theme of individuals trapped within their own creations.
 
 
-    The gameplay mechanics draw inspiration from real-life hacking environments like "BitBurner" and "Hack the Box," grounding the experience in a sense of authenticity. As players progress through the levels, they encounter increasingly complex puzzles, mirroring the challenges of navigating through a fragmented and chaotic digital landscape.
+	The gameplay mechanics draw inspiration from real-life hacking environments like "BitBurner" and "Hack the Box," grounding the experience in a sense of authenticity. As players progress through the levels, they encounter increasingly complex puzzles, mirroring the challenges of navigating through a fragmented and chaotic digital landscape.
 
 
-    **<span style="text-decoration:underline;">The player's role as a "Black Hat Hacker" adds a moral ambiguity to the gameplay, forcing them to confront the consequences of their actions within the game world. The tension between personal gain and ethical responsibility mirrors the broader themes of power and corruption in a dystopian society.</span>**
+	**<span style="text-decoration:underline;">The player's role as a "Black Hat Hacker" adds a moral ambiguity to the gameplay, forcing them to confront the consequences of their actions within the game world. The tension between personal gain and ethical responsibility mirrors the broader themes of power and corruption in a dystopian society.</span>**
 
 
-    Overall, "Hacktivate" offers players a thought-provoking journey into a digital dystopia, where the boundaries between right and wrong are blurred, and the quest for control drives the narrative forward.
+	Overall, "Hacktivate" offers players a thought-provoking journey into a digital dystopia, where the boundaries between right and wrong are blurred, and the quest for control drives the narrative forward.
 
 
 
@@ -273,16 +273,16 @@ There is to be a real time clock based upon the users selection of timezone. (Ho
 
 
 
-    There will be a very wide range of colors throughout the game and in the terminal the background is to be black or white with colored text that can be changed by the user
+	There will be a very wide range of colors throughout the game and in the terminal the background is to be black or white with colored text that can be changed by the user
 
 <h4>Design</h4>
 
 
 
-    A very **minimalistic **approach will go into the design of the game, heavily relying on the contrast of colors to provide depth. Though, the design still is clean and smooth in the sense that, the use of many shades of a color will be as present to confront the **techy style** and pixel art.
+	A very **minimalistic **approach will go into the design of the game, heavily relying on the contrast of colors to provide depth. Though, the design still is clean and smooth in the sense that, the use of many shades of a color will be as present to confront the **techy style** and pixel art.
 
 
-    
+	
 
 <p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
@@ -297,13 +297,13 @@ There is to be a real time clock based upon the users selection of timezone. (Ho
 
 
 
-    In crafting the musical backdrop for the game, the focus will be on capturing the essence of techno music. Embracing minimalism, the tracks will utilize reverb and effects to create a sense of space, even with a limited number of instruments. Expect basslines and rhythmic drum patterns to dominate, complemented by subtler synthesized elements. This approach not only enhances the retro aesthetic but also immerses players in the energetic and pulsating world of techno.
+	In crafting the musical backdrop for the game, the focus will be on capturing the essence of techno music. Embracing minimalism, the tracks will utilize reverb and effects to create a sense of space, even with a limited number of instruments. Expect basslines and rhythmic drum patterns to dominate, complemented by subtler synthesized elements. This approach not only enhances the retro aesthetic but also immerses players in the energetic and pulsating world of techno.
 
 <h4>Sound Effects</h4>
 
 
 
-    To add more flare and polish to the experience, a multitude of environmental sound effects will give weight and feedback to the player’s actions. Rather than foley, or otherwise realistic sounds, synthesized blips, bloops,whooshes, errors sounds are used.
+	To add more flare and polish to the experience, a multitude of environmental sound effects will give weight and feedback to the player’s actions. Rather than foley, or otherwise realistic sounds, synthesized blips, bloops,whooshes, errors sounds are used.
 
 <h3>Game Experience</h3>
 
@@ -312,20 +312,20 @@ There is to be a real time clock based upon the users selection of timezone. (Ho
 
 
 
-    On top of the rigid pixel art constituting the rest of the art, a more smooth, higher definition style will be incorporated in the UI. Utilizing many shades of the RGB spectrum allowed in the art restriction, anti-aliasing is used to further emphasize the UI.
+	On top of the rigid pixel art constituting the rest of the art, a more smooth, higher definition style will be incorporated in the UI. Utilizing many shades of the RGB spectrum allowed in the art restriction, anti-aliasing is used to further emphasize the UI.
 
 <h4>Controls</h4>
 
 
 
-    **<span style="text-decoration:underline;">Keyboard</span>**
+	**<span style="text-decoration:underline;">Keyboard</span>**
 
 
-    	Arrow keys / WASD \
+		Arrow keys / WASD \
 **<span style="text-decoration:underline;">Gamepad</span>**
 
 
-    	Partial support for traveling and shop(Eventually)
+		Partial support for traveling and shop(Eventually)
 
 <h3>Development Timeline</h3>
 
