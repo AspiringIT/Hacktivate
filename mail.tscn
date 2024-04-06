@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://xf5ekkbk6jdh"]
+[gd_scene load_steps=6 format=3 uid="uid://xf5ekkbk6jdh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8g3c"]
 bg_color = Color(0.12549, 0.12549, 0.12549, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tee5k"]
 bg_color = Color(0.32549, 0.337255, 0.309804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kv20w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qoqsx"]
+bg_color = Color(0.32549, 0.337255, 0.309804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8spsh"]
 
 [node name="Mail" type="Control"]
 layout_mode = 3
@@ -34,7 +41,82 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="PanelContainer" type="PanelContainer" parent="Backround/MarginContainer/Rows"]
-custom_minimum_size = Vector2(50, 2.08165e-12)
+[node name="Inbox" type="PanelContainer" parent="Backround/MarginContainer/Rows"]
+custom_minimum_size = Vector2(300, 2.08165e-12)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_tee5k")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Backround/MarginContainer/Rows/Inbox"]
+layout_mode = 2
+
+[node name="Emails" type="VBoxContainer" parent="Backround/MarginContainer/Rows/Inbox/ScrollContainer"]
+layout_mode = 2
+
+[node name="Inbox_Label" type="Label" parent="Backround/MarginContainer/Rows/Inbox"]
+layout_mode = 2
+text = "Inbox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+label_settings = SubResource("LabelSettings_kv20w")
+horizontal_alignment = 1
+
+[node name="Message Container" type="PanelContainer" parent="Backround/MarginContainer/Rows"]
+custom_minimum_size = Vector2(800, 2.08165e-12)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qoqsx")
+
+[node name="Message_Label" type="Label" parent="Backround/MarginContainer/Rows/Message Container"]
+layout_mode = 2
+text = "Message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+label_settings = SubResource("LabelSettings_8spsh")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Backround/MarginContainer/Rows/Message Container"]
+layout_mode = 2
+
+[node name="Message" type="HBoxContainer" parent="Backround/MarginContainer/Rows/Message Container/ScrollContainer"]
+layout_mode = 2
