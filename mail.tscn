@@ -116,9 +116,13 @@ layout_mode = 2
 [node name="Emails" type="VBoxContainer" parent="Backround/MarginContainer/Rows/Inbox/ScrollContainer"]
 layout_mode = 2
 
-[node name="New_Message" type="Button" parent="Backround/MarginContainer/Rows/Inbox/ScrollContainer/Emails"]
+[node name="New_Email1" type="Button" parent="Backround/MarginContainer/Rows/Inbox/ScrollContainer/Emails"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+size_flags_vertical = 0
+text = "Master of curl
+
+"
 
 [node name="Message Container" type="PanelContainer" parent="Backround/MarginContainer/Rows"]
 custom_minimum_size = Vector2(800, 2.08165e-12)
@@ -130,3 +134,56 @@ layout_mode = 2
 
 [node name="Message" type="HBoxContainer" parent="Backround/MarginContainer/Rows/Message Container/ScrollContainer"]
 layout_mode = 2
+
+[node name="Expanded_Message1" type="Button" parent="Backround/MarginContainer/Rows/Message Container/ScrollContainer/Message"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+text = "
+Quest Name: Master of Curl
+Description: In the vast world of command-line tools, `curl` stands as a powerful ally. 
+Your quest is to master the use of `curl`, a command-line tool used for transferring data with URLs. 
+Your tasks include:
+
+1. Learn the basic usage of `curl` to send GET requests.
+2. Understand how to send POST requests with `curl`.
+3. Explore the different options available with `curl`, such as `-o` for output redirection.
+4. Use `curl` to download a file from a specific URL.
+5. Demonstrate your knowledge by using `curl` to interact with a REST API.
+
+Upon completion of these tasks, you will have mastered the basics of `curl` 
+and be well on your way to becoming a command-line wizard. Good luck!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+alignment = 0
+
+[node name="Accept_Button" type="Button" parent="Backround/MarginContainer/Rows/Message Container/ScrollContainer/Message/Expanded_Message1"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 364.0
+offset_right = 725.0
+offset_bottom = 476.0
+text = "Accept"
+
+[node name="Button" type="Button" parent="Backround/MarginContainer/Rows/Message Container/ScrollContainer/Message/Expanded_Message1"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 488.0
+offset_right = 728.0
+offset_bottom = 589.0
+text = "Exit Program
+"
