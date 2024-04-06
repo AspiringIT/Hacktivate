@@ -38,6 +38,8 @@ func process_command(input: String) -> String:
 			return setuser(second_word,third_word)
 		"whoami":
 			return whoami()
+		"open":
+			return open(second_word)
 		"exit":  
 			return exit()  
 		_:  # If the command is unrecognized
@@ -83,6 +85,15 @@ func setuser(second_word: String, third_word: String) -> String:
 		
 func whoami():
 	return user
+	
+func open(second_word: String):
+	var scene_path = "res://mail.tscn"
+	if second_word == "mail":
+		if ResourceLoader.exists(scene_path):
+			get_tree().change_scene_to_file(scene_path)
+			return "Scene changed to Mail"
+	else:
+		return "Failed to change scene because the scene file does not exist"
 	
 func exit() -> String:
 	var scene_path = "res://Maps/inside_house.tscn"
